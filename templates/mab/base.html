@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}Madhumoti Associations, BSMRSTU-8100{% endblock title %}</title>
+</head>
+<body>
+    <div id="header">
+    {% block header %}
+        <div class="logo-area">
+            <h2>Logo area</h2>
+        </div>
+        <h1>Madhumoti Associations, BSMRSTU</h1>
+    {% endblock header %}
+    </div>
+    {% if request.user.is_authenticated %}
+    <p>Welcome, {{ request.user.get_username }}</p>
+    {% else %}
+    <p>Welcome, Anonymous user</p>
+    {% endif %}
+</body>
+</html>
