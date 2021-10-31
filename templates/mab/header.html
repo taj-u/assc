@@ -1,0 +1,40 @@
+{% load static %}
+<header class="header">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="{ % url "home-page" % }"><img src="{% static 'logo32.png' %}" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Who we are</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">What we do</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Event</a>
+            </li>    
+            <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Gellery</a>
+            </li>    
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact us</a>
+            </li>                      
+            </ul>
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+            </form>
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-light me-2">Login</button>
+                <button type="button" class="btn btn-warning">Sign-up</button>
+            </div>
+        </div>
+        </div>
+    </nav>
+</header>
